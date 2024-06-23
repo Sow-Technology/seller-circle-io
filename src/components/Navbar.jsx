@@ -48,9 +48,9 @@ const Navbar = () => {
   }, [y]);
   return (
     <>
-      <div className="w-full top-0 bg-[#0762C8]/90 backdrop-blur-3xl rounded-b-[23px] max-h-max relative z-[500]">
+      <div className="w-full top-0  backdrop-blur-3xl rounded-b-[23px] max-h-max relative z-[500]">
         <div className="lg:flex hidden max-w-7xl pt-5  mx-auto px-20  items-center justify-between text-sm ">
-          <div className="text-white flex gap-5 items-center justify-center">
+          <div className="text-[#171717] flex gap-5 items-center justify-center">
             {/* <div className="text-sm">About Us</div>
             <div className="text-lg">
               <FaFacebook />
@@ -58,18 +58,18 @@ const Navbar = () => {
           </div>
           <div className="flex gap-5 text-sm items-center">
             <Link href="tel:+9108041688315">
-              <div className="flex text-white items-center gap-2">
+              <div className="flex text-[#171717] items-center gap-2">
                 <FaPhoneAlt className="text-lg" />
                 +9108041688315
               </div>
             </Link>
-            {/* <div className="flex text-white items-center gap-2">
+            {/* <div className="flex text-[#171717] items-center gap-2">
               <FaLocationDot className="text-lg" />
               Kalyan Nagar, Bangalore
             </div> */}
             <Link href="mailto:contact@sellercircle.in">
               {" "}
-              <div className="flex text-white items-center gap-2">
+              <div className="flex text-[#171717] items-center gap-2">
                 <IoMail className="text-lg" />
                 contact@sellercircle.in
               </div>
@@ -78,31 +78,31 @@ const Navbar = () => {
         </div>
         <div className="max-w-7xl mx-auto flex items-center px-5 md:px-[80px] pt-[20px] pb-4  flex-row justify-between">
           <div>
-            <Logo />
+            <Logo light={false} />
           </div>
           <div className="flex gap-5 items-center">
             <DesktopNav />
-            <Link href="/contact">
+            {/* <Link href="/contact">
               {" "}
               <Button variant="cta">LET&#39;S TALK</Button>
-            </Link>
+            </Link> */}
             <MobileNav />
           </div>
         </div>
       </div>
       {isSecNav && (
-        <div className="w-full fixed slide-in-from-top-4 transition-all ease-in-out top-0 bg-white z-40 backdrop-blur-3xl  max-h-max text-black">
+        <div className="w-full fixed slide-in-from-top-4 transition-all ease-in-out top-0 bg-white z-40 backdrop-blur-3xl  max-h-max text-black shadow-lg">
           <div className="max-w-7xl mx-auto flex items-center px-5 md:px-[80px] pt-[20px] pb-4  flex-row justify-between">
             <div>
               <Logo light={false} />
             </div>
             <div className="flex gap-5 items-center">
               <SecDesktopNav />
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 {" "}
                 <Button variant="cta">LET&#39;S TALK</Button>
-              </Link>{" "}
-              <MobileNav className="invert" />
+              </Link>{" "} */}
+              <MobileNav />
             </div>
           </div>
         </div>
@@ -115,60 +115,64 @@ const NavItems = [
     name: "Home",
     link: "/",
   },
+  // {
+  //   name: "About us",
+  //   link: "/about-us",
+  // },
+  // {
+  //   name: "Service",
+  //   subItems: [
+  //     {
+  //       name: "Cataloging",
+  //       link: "#",
+  //     },
+  //     {
+  //       name: "Advertising Management",
+  //       link: "#",
+  //     },
+  //     {
+  //       name: "Account Management",
+  //       link: "#",
+  //     },
+  //     {
+  //       name: "EBC",
+  //       link: "#",
+  //     },
+  //     {
+  //       name: "Brand Store Creation",
+  //       link: "#",
+  //     },
+  //     {
+  //       name: "Seller Reinstatement Services",
+  //       link: "#",
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: "Careers",
+  //   link: "/careers",
+  // },
+  // {
+  //   name: "Pricing",
+  //   link: "/pricing",
+  // },
   {
-    name: "About us",
-    link: "/about-us",
-  },
-  {
-    name: "Service",
-    subItems: [
-      {
-        name: "Cataloging",
-        link: "#",
-      },
-      {
-        name: "Advertising Management",
-        link: "#",
-      },
-      {
-        name: "Account Management",
-        link: "#",
-      },
-      {
-        name: "EBC",
-        link: "#",
-      },
-      {
-        name: "Brand Store Creation",
-        link: "#",
-      },
-      {
-        name: "Seller Reinstatement Services",
-        link: "#",
-      },
-    ],
-  },
-  {
-    name: "Careers",
-    link: "/careers",
-  },
-  {
-    name: "Pricing",
-    link: "/pricing",
+    name: "Data And Privacy Policy",
+    link: "/data-and-privacy-policy",
   },
 ];
 const DesktopNav = () => {
   return (
     <div className="lg:block hidden">
       <NavigationMenu>
-        <NavigationMenuList className="gap-5 text-white font-bold text-base uppercase">
+        <NavigationMenuList className="gap-5 text-[#427fea] text-base ">
           {NavItems.map((item) =>
             item.subItems ? (
               <NavigationMenuItem key={item.name} className="relative">
-                <NavigationMenuTrigger className="text-white bg-transparent font-bold text-base uppercase">
+                <NavigationMenuTrigger className="text-[#171717] bg-transparent font-bold text-base uppercase">
                   {item.name}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className=" font-bold text-base uppercase ">
+                <NavigationMenuContent className=" font-bold text-base  ">
                   <NavigationMenuList className="grid w-max text-left gap-3 p-4  ">
                     {item.subItems.map((subItem) => (
                       <NavigationMenuItem key={subItem.name}>
@@ -201,7 +205,7 @@ const SecDesktopNav = () => {
   return (
     <div className="lg:block hidden">
       <NavigationMenu>
-        <NavigationMenuList className="gap-5 text-black font-bold text-base uppercase">
+        <NavigationMenuList className="gap-5 text-[#427fea] text-base">
           {NavItems.map((item) =>
             item.subItems ? (
               <NavigationMenuItem key={item.name} className="relative">
@@ -265,9 +269,9 @@ const MobileNav = ({ className }) => {
 
   return (
     <div className="block lg:hidden relative z-[501]  ">
-      <Sheet className="z-[501] relative">
+      <Sheet className="z-[501] relative text-white">
         <SheetTrigger asChild className={className}>
-          <div className="text-white cursor-pointer">
+          <div className="text-black cursor-pointer">
             <MenuIcon />
           </div>
         </SheetTrigger>
@@ -279,7 +283,7 @@ const MobileNav = ({ className }) => {
                   <NavigationMenuItem key={item.name} className="relative">
                     <div
                       onClick={() => setIsActive(!isActive)}
-                      className="text-white font-bold text-base cursor-pointer uppercase flex gap-2"
+                      className="text-[#171717] font-bold text-base cursor-pointer uppercase flex gap-2"
                     >
                       {item.name}
                       <ChevronDown />
