@@ -1,5 +1,5 @@
 import React from "react";
-import Audit from "../forms/Audit";
+import Image from "next/image";
 
 const Opportunities = () => {
   return (
@@ -16,6 +16,13 @@ const Opportunities = () => {
         platform, expertly curated strategies, and data-driven insights will
         help you achieve unprecedented levels of success on Amazon.
       </p>
+      <Image
+        src="/images/18.png"
+        alt=""
+        width="1200"
+        height="1200"
+        className=" rounded-md max-h-[80vh]  w-auto "
+      />
       <h2 className="font-extrabold text-center lg:text-5xl text-3xl my-7 text-tp ">
         Get Started Today
       </h2>
@@ -24,10 +31,7 @@ const Opportunities = () => {
         learn more about how our analytics application can help you achieve your
         goals.
       </p>
-      <div className="lg:max-w-[80%]">
-        {" "}
-        <Audit />
-      </div>
+      <div className="lg:max-w-[80%]"> {/* <Audit /> */}</div>
     </div>
   );
 };

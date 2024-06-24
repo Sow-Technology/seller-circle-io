@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="bg-background">
       {" "}
       <div className="mx-auto lg:px-20 px-8 max-w-7xl   py-5">
-        <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
+        {/* <div className="flex flex-wrap max-lg:items-center max-lg:justify-center justify-between gap-5">
           <div className="lg:w-[50%] text-white font-bold flex-row lg:p-5 p-3 flex lg:text-2xl text-xs bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px] gap-2 lg:gap-4">
             <Image
               src="/images/1.webp"
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="lg:w-[40%] flex items-center justify-center">
             <Image src="/logo.svg" alt="" width={350} height={200} />
           </div>
-        </div>
+        </div> */}
         <div className="h-0.5 w-full bg-white opacity-50 my-5"></div>
         {/* <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
           <div className="lg:w-[55%] text-white font-bold flex-row p-5 flex text-3xl bg-[#0BADFA] items-center justify-center drop-shadow-xl rounded-[19px]">
@@ -41,10 +41,10 @@ const Footer = () => {
         </div> */}
         <div className="flex flex-wrap max-lg:items-center max-lg:justify-center gap-5">
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-8">
-            <div className="lg:w-[60%]">
+            {/* <div className="lg:w-[60%]">
               {" "}
               <Audit />
-            </div>
+            </div> */}
             <div className=" h-[90%] p-4 bg-[#0BADFA]-500 text-left text-white responsive-box m-2">
               <div className="flex flex-row flex-wrap justify-between gap-5 mb-2">
                 <div className=" mr-4">
